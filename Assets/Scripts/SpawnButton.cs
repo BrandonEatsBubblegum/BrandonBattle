@@ -7,6 +7,7 @@ public class SpawnButton : MonoBehaviour
     public float cost;
     public Spawner spawner;
     public UnitType type;
+    public KeyCode key;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,10 @@ public class SpawnButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(key))
+        {
+            Purchase();
+        }
     }
     public void Purchase()
     {

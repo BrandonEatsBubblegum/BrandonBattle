@@ -22,6 +22,7 @@ public class BattleBall : MonoBehaviour
     float checkInterval = .5f;
     Color originalColor;
     public bool faceDir;
+    public bool invisible = false;
     public GameObject particleEffect;
 
     // Start is called before the first frame update
@@ -121,11 +122,14 @@ public class BattleBall : MonoBehaviour
             {
                 if(col.GetComponent<BattleBall>()!= null)
                 {
-                    if(col.GetComponent<BattleBall>().team != team)
+                    if (col.GetComponent<BattleBall>().invisible == false)
                     {
-                        currentTarget = col.transform;
-                        foundTarget = true;
-                        break;
+                        if (col.GetComponent<BattleBall>().team != team)
+                        {
+                            currentTarget = col.transform;
+                            foundTarget = true;
+                            break;
+                        }
                     }
                 }
             }

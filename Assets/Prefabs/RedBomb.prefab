@@ -197,8 +197,8 @@ MonoBehaviour:
   range: 10
   enemyBase: {fileID: 0}
   faceDir: 0
-  particleEffect: {fileID: 6101354493270656335, guid: 63fc54106387fdd4a8e8602097da113f,
-    type: 3}
+  invisible: 1
+  particleEffect: {fileID: 6101354493270656335, guid: 63fc54106387fdd4a8e8602097da113f, type: 3}
 --- !u!82 &1792209815436966427
 AudioSource:
   m_ObjectHideFlags: 0
